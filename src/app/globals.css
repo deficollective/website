@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #4800b9;
+  --color-primary-light: #6200ff;
+  --color-body: #170048;
+  --color-header: #DEDBFF;
+  --color-surface: #F4F3FF;
+  --color-surface-dark: #F4F3FF;
+  --color-text: #6d60b9;
+  --color-text-dark: #2a006c;
+  --color-text-heading: #4800b9;
+  --color-link: #4800b9;
+  --color-link-dark: #664ba5;
+  --font-primary: 'Red Hat Display', sans-serif;
+  --font-heading: 'Fredoka', sans-serif;
+}
+
+body {
+  background: var(--color-body);
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  text-underline-offset: 0.3rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-stretch: ultra-expanded;
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+/* Links */
+a {
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+a:hover {
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3rem;
+}
+
+/* Banner background */
+.bg-main {
+  background-image: url('/background-ants.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% + 250px) calc(50% + 100px);
+  background-size: 2392px 1230px;
+  background-blend-mode: lighten;
+}
+
+/* Partners background */
+.bg-partners {
+  background-color: var(--color-surface-dark);
+  background-image: url('/background-anthill.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+}
+
+/* Title gradient */
+.gradient-span {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(270deg, #DE81FF 3.36%, #A265FF 100%);
+}
+
+/* Primary gradient background for main */
+.bg-gradient-main {
+  background: radial-gradient(80.82% 31.59% at 90.31% 35.07%, #F4F3FF 0%, #DEDBFF 75.73%, #DEDBFF 100%);
+}
+
+/* Content prose styles */
+.prose {
+  color: var(--color-text);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-heading);
+  font-stretch: ultra-expanded;
+  font-weight: 500;
+  color: var(--color-text-heading);
+  margin-bottom: 0.8em;
+  margin-top: 1.6em;
+}
+
+.prose h2 { font-size: 1.6em; }
+.prose h3 { font-size: 1.3em; }
+
+.prose a {
+  color: var(--color-link-dark);
+  font-weight: 600;
+}
+
+.prose a:hover {
+  color: var(--color-link);
+}
+
+.prose strong {
+  color: var(--color-text-dark);
+  font-weight: 700;
+}
+
+.prose ul, .prose ol {
+  color: var(--color-text);
+}
+
+.prose li {
+  color: var(--color-text);
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 1rem;
+  color: var(--color-text);
+}
+
+.prose table th {
+  font-weight: 700;
+  color: var(--color-text-dark);
+  padding: 0.75rem 1.5rem;
+}
+
+.prose table td {
+  padding: 0.75rem 1.5rem;
+}
+
+.prose table tbody {
+  background-color: var(--color-surface-dark);
+}
+
+/* Discord button in prose */
+.prose .discord-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--color-link-dark);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.prose .discord-btn:hover {
+  border-style: dotted;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 2.2rem !important;
+    line-height: 2.2rem !important;
+  }
+}
